@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/godatastruct/stack"
+	"github.com/godatastruct/data/stack"
 )
 
 func main() {
