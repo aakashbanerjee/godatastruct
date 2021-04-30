@@ -9,12 +9,14 @@ import (
 func main() {
 	s := &stack.Stack{}
 	fmt.Printf("Type of variable s: %T\n", s)
+	fmt.Println("----Pushing Test Data----")
 	s.Push("aakash")
 	printStack(s.Display())
 	s.Push(2)
 	printStack(s.Display())
 	s.Push(3.14)
 	printStack(s.Display())
+	fmt.Println("----Pop Test Data----")
 	d := s.Pop()
 	if d != nil {
 		fmt.Printf("Popped: %v\n", d)
@@ -34,6 +36,7 @@ func main() {
 	}
 	printStack(s.Display())
 	fmt.Println("Is Stack Empty: ", s.IsEmpty())
+	fmt.Println("----Extra Pop----")
 	d = s.Pop()
 	if d != nil {
 		fmt.Printf("Popped: %v\n", d)
