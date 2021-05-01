@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 
+	"github.com/godatastruct/data/linkedlist"
 	"github.com/godatastruct/data/queue"
 	"github.com/godatastruct/data/stack"
 )
 
 func main() {
 	//callStack() //Executes all func calls for Stack
-	callQueue() //Executes all func calls for Queue
+	//callQueue() //Executes all func calls for Queue
+	callLinkedList() //Executes all func calls for LinkedList
 }
 
 func printStack(st []interface{}, t int) {
@@ -18,6 +20,22 @@ func printStack(st []interface{}, t int) {
 
 func printQueue(q []interface{}, h int) {
 	fmt.Printf("Queue Elements: %v Head: %v\n", q, h)
+}
+
+func callLinkedList() {
+	l := &linkedlist.LinkedList{}
+	n := &linkedlist.Node{Item: "D"}
+	l.InsertHead(n)
+	n = &linkedlist.Node{Item: "C"}
+	l.InsertHead(n)
+	n = &linkedlist.Node{Item: "B"}
+	l.InsertHead(n)
+	//l.Display()
+	n = &linkedlist.Node{Item: "E"}
+	l.InsertTail(n)
+	n = &linkedlist.Node{Item: "A"}
+	l.InsertHead(n)
+	l.Display()
 }
 
 func callQueue() {
