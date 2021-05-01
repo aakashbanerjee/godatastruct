@@ -56,3 +56,35 @@ func (l *LinkedList) InsertTail(n *Node) {
 	}
 	l.len++
 }
+
+//Length returns the length of the list
+func (l *LinkedList) Length() int {
+	return l.len
+}
+
+//RemoveHead removes the current headnode, headnode.next will be the new headnode
+func (l *LinkedList) RemoveHead() {
+	headNode := l.head
+	if headNode == nil {
+		fmt.Println("Linked List is Empty")
+	} else {
+		l.head = headNode.next
+	}
+}
+
+//RemoveTail removes the current tailnodes
+func (l *LinkedList) RemoveTail() {
+	headNode := l.head
+	var tempNode *Node
+	if headNode == nil {
+		fmt.Println("Linked List is Empty")
+	} else if headNode.next == nil {
+		l.head = nil
+	} else {
+		for headNode.next != nil {
+			tempNode = headNode
+			headNode = headNode.next
+		}
+		tempNode.next = nil
+	}
+}
