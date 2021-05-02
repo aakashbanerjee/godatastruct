@@ -69,7 +69,9 @@ func (l *LinkedList) RemoveHead() {
 		fmt.Println("Linked List is Empty")
 	} else {
 		l.head = headNode.next
+		l.len--
 	}
+
 }
 
 //RemoveTail removes the current tailnodes
@@ -80,11 +82,13 @@ func (l *LinkedList) RemoveTail() {
 		fmt.Println("Linked List is Empty")
 	} else if headNode.next == nil {
 		l.head = nil
+		l.len--
 	} else {
 		for headNode.next != nil {
 			tempNode = headNode
 			headNode = headNode.next
 		}
 		tempNode.next = nil
+		l.len--
 	}
 }

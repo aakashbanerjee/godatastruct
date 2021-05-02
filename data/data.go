@@ -26,24 +26,25 @@ func callLinkedList() {
 	l := &linkedlist.LinkedList{}
 	n := &linkedlist.Node{Item: "D"}
 	l.InsertHead(n)
-	fmt.Println(l.Length())
+	//fmt.Println(l.Length())
 	n = &linkedlist.Node{Item: "C"}
 	l.InsertHead(n)
-	fmt.Println(l.Length())
+	//fmt.Println(l.Length())
 	n = &linkedlist.Node{Item: "B"}
 	l.InsertHead(n)
-	fmt.Println(l.Length())
+	//fmt.Println(l.Length())
 	n = &linkedlist.Node{Item: "E"}
 	l.InsertTail(n)
-	fmt.Println(l.Length())
+	//fmt.Println(l.Length())
 	n = &linkedlist.Node{Item: "A"}
 	l.InsertHead(n)
-	fmt.Println(l.Length())
+	//fmt.Println(l.Length())
 	l.Display()
 	l.RemoveHead()
 	l.Display()
 	l.RemoveTail()
 	l.Display()
+	fmt.Println(l.Length())
 }
 
 func callQueue() {
